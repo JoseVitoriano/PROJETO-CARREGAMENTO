@@ -1,65 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Painel de Carregos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabela de Cargas</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body data-page="dados">
+  <header class="topbar">
+    <h1>Tabela de Cargas</h1>
+    <nav>
+      <a href="index.html">Cadastro</a>
+      <a href="dados.html">Tabela</a>
+      <a href="indicadores.html">Indicadores</a>
+    </nav>
+  </header>
 
-    <header>
-        <div class="logo">
-            <span><img src="../vetor/socimol-logo.png" alt=""></span>
-        </div>
-        <div class="cabecalho">
-            <h1><strong>Painel de Carregos</strong></h1>
-        </div>
-        <hr>
-        
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="../html/index.html" target="_self">Home</a></li>
-                    <li><a href="../html/formulario.html" target="_self">Cadastro</a></li>
-                    <li><a href="../html/painel.html" target="_self">Painel de Carregos</a></li>
-                    <li><a href="../html/indicadores.html" target="_self">Indicadores</a></li>
-                    <li><a href="#" target="_self">Sobre Nós</a></li>
-                </ul>
-            </nav>
-        </div>
-        <br>
-
-    </header>
-
-    <main class="container">
+  <main class="container">
     <section class="card">
-      <h2>Registros cadastrados</h2>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Depósito</th>
-              <th>Motorista</th>
-              <th>Perfil do veículo</th>
-              <th>Cubagem</th>
-              <th>Data conclusão</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody id="tbodyCadastro"></tbody>
-        </table>
+      <div class="actions">
+        <a class="btn secondary" href="index.html">Novo registro</a>
+        <button class="btn secondary" id="exportBtn">Exportar Excel</button>
       </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Depósito</th>
+            <th>Motorista</th>
+            <th>Cubagem</th>
+            <th>Perfil</th>
+            <th>Data expedição</th>
+            <th>Cadastro</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaCargas"></tbody>
+      </table>
     </section>
   </main>
 
-    <script src="../javascript/script.js"></script>
-
-    <footer>
-
-    </footer>
-    
+  <script src="app.js"></script>
 </body>
 </html>

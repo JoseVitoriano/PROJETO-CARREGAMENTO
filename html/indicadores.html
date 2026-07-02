@@ -1,69 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Carregos Socimol</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indicadores</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body data-page="indicadores">
+  <header class="topbar">
+    <h1>Indicadores</h1>
+    <nav>
+      <a href="index.html">Cadastro</a>
+      <a href="dados.html">Tabela</a>
+      <a href="indicadores.html">Indicadores</a>
+    </nav>
+  </header>
 
-    <header>
-        <div class="logo">
-            <span><img src="../vetor/socimol-logo.png" alt=""></span>
-        </div>
-        <div class="cabecalho">
-            <h1><strong>Carregamentos Socimol</strong></h1>
-        </div>
-        <hr>
-        
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="../html/index.html" target="_self">Home</a></li>
-                    <li><a href="../html/formulario.html" target="_self">Cadastro</a></li>
-                    <li><a href="../html/painel.html" target="_self">Painel de Carregos</a></li>
-                    <li><a href="../html/indicadores.html" target="_self">Indicadores</a></li>
-                    <li><a href="#" target="_self">Sobre Nós</a></li>
-                </ul>
-            </nav>
-        </div>
-        <br>
-
-    </header>
-
-    <main class="container">
+  <main class="container">
     <section class="cards">
-      <div class="indicator card">
-        <h3>Total de cadastros</h3>
-        <p id="totalCadastros">0</p>
-      </div>
+      <div class="card metric"><h3>Total de registros</h3><p id="totalRegistros">0</p></div>
+      <div class="card metric"><h3>Cubagem total</h3><p id="cubagemTotal">0</p></div>
+      <div class="card metric"><h3>Cubagem média</h3><p id="cubagemMedia">0</p></div>
+      <div class="card metric"><h3>Depósitos únicos</h3><p id="depositosUnicos">0</p></div>
+    </section>
 
-      <div class="indicator card">
-        <h3>Média de cubagem</h3>
-        <p id="mediaCubagem">0</p>
-      </div>
-
-      <div class="indicator card">
-        <h3>Cadastros hoje</h3>
-        <p id="cadastrosHoje">0</p>
-      </div>
-
-      <div class="indicator card">
-        <h3>Depósitos diferentes</h3>
-        <p id="depositosUnicos">0</p>
-      </div>
+    <section class="card">
+      <h2>Registros por depósito</h2>
+      <ul id="listaDepositos"></ul>
     </section>
   </main>
 
-    <script src="../javascript/script.js"></script>
-
-    
-
-    <footer>
-
-    </footer>
-    
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,116 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Formulário de Cadastro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Carga</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body data-page="editar">
+  <header class="topbar">
+    <h1>Editar Registro</h1>
+    <nav>
+      <a href="index.html">Cadastro</a>
+      <a href="dados.html">Tabela</a>
+      <a href="indicadores.html">Indicadores</a>
+    </nav>
+  </header>
 
-    <header>
-        <div class="logo">
-            <span><img src="../vetor/socimol-logo.png" alt=""></span>
-        </div>
-        <div class="cabecalho">
-            <h1><strong>Carregamentos Socimol</strong></h1>
-        </div>
-        <hr>
-        
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="../html/index.html" target="_self">Home</a></li>
-                    <li><a href="../html/formulario.html" target="_self">Cadastro</a></li>
-                    <li><a href="../html/painel.html" target="_self">Painel de Carregos</a></li>
-                    <li><a href="../html/indicadores.html" target="_self">Indicadores</a></li>
-                    <li><a href="#" target="_self">Sobre Nós</a></li>
-                </ul>
-            </nav>
-        </div>
-        <br>
-
-    </header>
-
-     <main class="container">
+  <main class="container">
     <section class="card">
-      <h2>Novo Cadastro</h2>
-
-      <form id="formCadastro">
-        <div class="grid">
-          <div class="field">
-            <label for="deposito">Nome do depósito</label>
-            <select id="inp-deposito" type="text" required class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                
-                <option value="">Selecione...</option>
-                <option value="">ARD|Araripina</option>
-                <option value="">BCD|Bacabal</option>
-                <option value="">BDE|Balsas</option>
-                <option value="">BDF|Barreiras</option>
-                <option value="">CAD|Campo Maior</option>
-                <option value="">CDE|Corrente</option>
-                <option value="">CDF|Codó</option>
-                <option value="">CDP|Caxias</option>
-                <option value="">CHD|Chapadinha</option>
-                <option value="">DAB|Água Branca</option>
-                <option value="">DAG|Araguaína</option>
-                <option value="">DBC|Barra do Corda</option>
-                <option value="">DBH|Barreirinhas</option>
-                <option value="">DBJ|Bom Jesus</option>
-                <option value="">DCO|Colinas</option>
-                <option value="">DPC|Picos</option>
-                <option value="">DPI|Pinheiro</option>
-                <option value="">DPU|Pres. Dutra</option>
-                <option value="">DSI|Santa Inês</option>
-                <option value="">DVG|vargem Grande</option>
-                <option value="">DZE|Zé Doca</option>
-                <option value="">FLD|Floriano</option>
-                <option value="">IDC|Imperatriz</option>
-                <option value="">LED|L. Eduardo Magualhães</option>
-                <option value="">OEI|Oeiras</option>
-                <option value="">PAR|Parnaíba</option>
-                <option value="">PDC|Petrolina</option>
-                <option value="">PDE|Palmas</option>
-                <option value="">PDF|Pedreiras</option>
-                <option value="">PID|Piripiri</option>
-                <option value="">ROS|Rosário</option>
-                <option value="">SRD|São Raimundo Nonato</option>
-                <option value="">TUD|Tutóia</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="motorista">Nome do motorista</label>
-            <input type="text" id="motorista" required />
-          </div>
-
-          <div class="field">
-            <label for="perfilVeiculo">Perfil do veículo</label>
-            <input type="text" id="perfilVeiculo" required />
-          </div>
-
-          <div class="field">
-            <label for="cubagem">Cubagem do veículo</label>
-            <input type="number" id="cubagem" step="0.01" required />
-          </div>
-
-          <div class="field">
-            <label for="dataConclusao">Data conclusão de carrego</label>
-            <input type="date" id="dataConclusao" required />
-          </div>
-        </div>
-
-        <button type="submit" class="btn">Salvar cadastro</button>
+      <form id="editForm" class="grid">
+        <input id="nomeDeposito" placeholder="Nome do depósito" required />
+        <input id="nomeMotorista" placeholder="Nome do motorista" required />
+        <input id="cubagem" type="number" step="0.01" placeholder="Cubagem" required />
+        <input id="perfilCarro" placeholder="Perfil do carro" required />
+        <input id="dataExpedicao" type="date" required />
+        <button type="submit" class="btn">Salvar alterações</button>
       </form>
     </section>
   </main>
-    
-  <script src="../javascript/script.js"></script>
 
-    <footer>
-
-    </footer>
-    
+  <script src="app.js"></script>
 </body>
 </html>
