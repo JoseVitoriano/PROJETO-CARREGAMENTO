@@ -3,39 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Cargas</title>
+  <title>Cadastro de Carregamento</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body data-page="cadastro">
+<body>
   <header class="topbar">
-    <h1>Cadastro de Cargas</h1>
+    <h1>Cadastro de Carregamento</h1>
     <nav>
       <a href="index.html">Cadastro</a>
-      <a href="dados.html">Tabela</a>
+      <a href="tabela.html">Tabela</a>
       <a href="indicadores.html">Indicadores</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Novo registro</h2>
-      <form id="cargoForm" class="grid">
-        <input id="nomeDeposito" placeholder="Nome do depósito" required />
-        <input id="nomeMotorista" placeholder="Nome do motorista" required />
-        <input id="cubagem" type="number" step="0.01" placeholder="Cubagem" required />
-        <input id="perfilCarro" placeholder="Perfil do carro" required />
-        <input id="dataExpedicao" type="date" required />
-        <button type="submit" class="btn">Salvar</button>
-      </form>
+      <h2>Novo Cadastro</h2>
 
-      <div class="actions">
-        <a class="btn secondary" href="dados.html">Ver tabela</a>
-        <a class="btn secondary" href="indicadores.html">Ver indicadores</a>
-        <button class="btn secondary" id="exportBtn">Exportar Excel</button>
-      </div>
+      <form id="formCadastro">
+        <div class="grid">
+          <div class="field">
+            <label for="deposito">Nome do depósito</label>
+            <input type="text" id="deposito" required />
+          </div>
+
+          <div class="field">
+            <label for="motorista">Nome do motorista</label>
+            <input type="text" id="motorista" required />
+          </div>
+
+          <div class="field">
+            <label for="perfilVeiculo">Perfil do veículo</label>
+            <input type="text" id="perfilVeiculo" required />
+          </div>
+
+          <div class="field">
+            <label for="cubagem">Cubagem do veículo</label>
+            <input type="number" id="cubagem" step="0.01" required />
+          </div>
+
+          <div class="field">
+            <label for="dataConclusao">Data conclusão de carregamento</label>
+            <input type="date" id="dataConclusao" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Salvar cadastro</button>
+      </form>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

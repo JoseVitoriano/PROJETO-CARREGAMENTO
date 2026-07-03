@@ -3,43 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabela de Cargas</title>
+  <title>Tabela de Cadastros</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body data-page="dados">
+<body>
   <header class="topbar">
-    <h1>Tabela de Cargas</h1>
+    <h1>Tabela de Cadastros</h1>
     <nav>
       <a href="index.html">Cadastro</a>
-      <a href="dados.html">Tabela</a>
+      <a href="tabela.html">Tabela</a>
       <a href="indicadores.html">Indicadores</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="card">
-      <div class="actions">
-        <a class="btn secondary" href="index.html">Novo registro</a>
-        <button class="btn secondary" id="exportBtn">Exportar Excel</button>
+      <h2>Dados cadastrados</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Depósito</th>
+              <th>Motorista</th>
+              <th>Perfil do veículo</th>
+              <th>Cubagem</th>
+              <th>Data conclusão</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyCadastro"></tbody>
+        </table>
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Depósito</th>
-            <th>Motorista</th>
-            <th>Cubagem</th>
-            <th>Perfil</th>
-            <th>Data expedição</th>
-            <th>Cadastro</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody id="tabelaCargas"></tbody>
-      </table>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
